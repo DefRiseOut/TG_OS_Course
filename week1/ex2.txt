@@ -1,0 +1,17 @@
+    1  mkdir ~/week1
+    2  cd ~/week1
+    3  ls
+    4  cd ~
+    5  ls ~
+    6  ls /usr/bin
+    7  ls ~/week
+    8  cd ~/week1
+    9  touch ex1.txt
+   10  ls .
+   11  pwd
+   12  ls usr/bin/
+   13  ls /usr/bin
+   14  grep PATTERN gcc
+   15  pwd
+   16  hostname
+   17  history > ex2.txt
