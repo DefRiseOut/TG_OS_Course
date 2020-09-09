@@ -1,0 +1,2 @@
+The number after parent is always -1, because when we write n = fork(); we store child's PID in n for parents's thread. 
+So then PID - n would be PID - (PID+1) = -1 for parents thread.
