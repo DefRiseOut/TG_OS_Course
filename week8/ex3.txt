@@ -1,0 +1,2 @@
+ex2 appeared as one of the processes running in the system.
+As 'top' updated, ex2 had more and more mamory allocated to it, then ex2 stopped after some time.

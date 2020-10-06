@@ -1,0 +1,3 @@
+8K = 2^13 imply that we need 13 bits for storing offset. 
+Then it leaves 3 bits for finding entries to 8 virtual pages the machine could have.
+Answer: 8
