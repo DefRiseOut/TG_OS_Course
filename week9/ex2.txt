@@ -4,7 +4,7 @@ since the algorithm cannot distinguish between a page that is 18 clocks old and 
 As a consequence, if a page is referenced consistently, it is almost never swapped. Like a page 1 in:
 (1 5 3 4 1 8 9 8 1 2 3 1 5 3 2 1 18 87 4 3 2 1 9 8 7 2 1 1 4 6 12 1)
 
-Hit/Miss ratio goes down the more randomness the sequence has, as well as the larger the [range of numbers in sequence]/[frame number] 
+Hit ratio goes down the more randomness the sequence has, as well as the larger the [range of numbers in sequence]/[frame number] 
 ratio is.
 When range of numbers in sequence is less or equal to the frame number:
-Hit/Miss ratio = ([sequence length] - [number of unique pages])/[number of unique pages]
+Hit ratio = ([sequence length] - [number of unique pages])/[sequence length]

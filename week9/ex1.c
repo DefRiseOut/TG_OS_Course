@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <math.h>
 
 int main(void) {
   // Opening the file for reading.
@@ -8,6 +9,8 @@ int main(void) {
   // Number of page frames.
   int fnum = 100;
   
+  int the_numba = pow(2, 15);
+
   int pages[fnum], page_ref[fnum];
   int j;
   for(j = 0; j < fnum; j++){
@@ -41,7 +44,7 @@ int main(void) {
       for(j = 0; j < fnum; j++){
         page_ref[j] = page_ref[j]/2;//Shift right.
       }
-      page_ref[index]+=32768;//1st bit in 16-bit reference code is 1.
+      page_ref[index]+=the_numba;//1st bit in 16-bit reference code is 1.
     }
     else{ //Page fault.
       misses++;
@@ -61,10 +64,10 @@ int main(void) {
         page_ref[j] = page_ref[j]/2;//Shift right after the check.
       }
       pages[index] = pn; //Switch the page.
-      page_ref[index] = 32768;
+      page_ref[index] = the_numba;
     }      
   }
-  float ratio = (float)(hits)/misses;
-  printf("Number of hits:%d.\nNumber of misses:%d.\nRatio:%f.\n",hits, misses, ratio);
+  float hitratio = (float)(hits)/(misses+hits), missratio = (float)(misses)/(misses+hits);
+  printf("Hit ratio:%f\nMiss ratio:%f\n",hitratio,missratio);
   return 0;
 }
