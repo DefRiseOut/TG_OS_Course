@@ -1,0 +1,2 @@
+Physical addresses are the addresses on the actual hardware of the computer, each address refering to a real part of ssd, dick, RAM, etc.
+Virtual addresses are just an abstraction, used by processes to not worry about the structure of the real memory.

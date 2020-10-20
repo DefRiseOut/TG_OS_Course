@@ -1,1 +1,0 @@
-link1, file1. Inode number: 45313
