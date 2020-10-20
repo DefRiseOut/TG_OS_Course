@@ -1,0 +1,15 @@
+$ ls -lah _ex3.txt
+-rw-r--r-- 1 useradd useradd 0 Oct 20 13:09 _ex3.txt
+$ chmod -x _ex3.txt
+$ ls -lah _ex3.txt
+-rw-r--r-- 1 useradd useradd 0 Oct 20 13:09 _ex3.txt
+$ chmod uo+rwx _ex3.txt
+$ ls -lah _ex3.txt
+-rwxr--rwx 1 useradd useradd 0 Oct 20 13:09 _ex3.txt
+$ chmod g=u _ex3.txt
+$ ls -lah _ex3.txt
+-rwxrwxrwx 1 useradd useradd 0 Oct 20 13:09 _ex3.txt
+
+-660 for ex3.txt means that user and group can read and write, but cant execute ex3.txt. Others cant do anything with ex3.txt.
+-775 for ex3.txt means that user and group can read, write and execute ex3.txt. Others can read and execute ex3.txt.
+-777 for ex3.txt means that everyone can read, write and execute ex3.txt.
